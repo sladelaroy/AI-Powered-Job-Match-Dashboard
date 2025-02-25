@@ -35,7 +35,7 @@ const JobList = () => {
           return (
             <div
               key={job.id}
-              className="bg-white p-4 rounded-lg shadow-md cursor-pointer"
+              className="bg-white p-4 rounded-lg shadow-md cursor-pointer transition-transform duration-200 ease-in-out transform hover:-translate-y-1 active:scale-95"
               onClick={() => setSelectedJob({ ...job, matchScore })} 
             >
               <h2 className="text-lg font-bold">{job.title}</h2>
