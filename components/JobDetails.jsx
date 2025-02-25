@@ -23,17 +23,17 @@ const JobDetails = ({ job, onClose }) => {
         {
           icon: "⚠️",
           style: {
-            backgroundColor: "#FFF3CD", // Warning background color
-            color: "#856404" // Warning text color
+            backgroundColor: "#FFF3CD", 
+            color: "#856404" 
           },
-          duration: 4000 // optional: duration in milliseconds
+          duration: 4000 
         }
       );
     } else {
-      setIsModalVisible(false); // Close modal when application is successful
-      onClose(); // Call onClose to reset the selected job in JobList
+      setIsModalVisible(false); 
+      onClose(); 
       toast.success("Successfully applied for the job!");
-      router.push("/"); // Redirect to home or applications
+      router.push("/"); 
     }
   };
 

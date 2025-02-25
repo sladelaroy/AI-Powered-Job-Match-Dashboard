@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import JobDetails from "./JobDetails"; // Import the JobDetails component
+import JobDetails from "./JobDetails"; 
 import { useJobContext } from "@/context/JobContext";
 
 const JobList = () => {
@@ -30,13 +30,13 @@ const JobList = () => {
       <h1 className="text-xl font-bold mb-4">Job Recommendations</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {jobData.map((job) => {
-          const matchScore = calculateMatchScore(job.requiredSkills); // Calculate match score dynamically
+          const matchScore = calculateMatchScore(job.requiredSkills); 
 
           return (
             <div
               key={job.id}
               className="bg-white p-4 rounded-lg shadow-md cursor-pointer"
-              onClick={() => setSelectedJob({ ...job, matchScore })} // Pass the match score along with the job
+              onClick={() => setSelectedJob({ ...job, matchScore })} 
             >
               <h2 className="text-lg font-bold">{job.title}</h2>
               <p>{job.company}</p>

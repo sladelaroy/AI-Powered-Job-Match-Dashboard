@@ -3,18 +3,18 @@ import { createContext, useState, useContext, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import axios from "axios";
 
-// Create the context
+
 const JobContext = createContext();
 
-// Create a provider component
+
 export const JobProvider = ({ children }) => {
-  const { data: session } = useSession(); // Get user session
+  const { data: session } = useSession(); 
   const [skills, setSkills] = useState([]);
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
     if (session?.user?.skills) {
-      setSkills(session.user.skills); // Add user skills when session loads
+      setSkills(session.user.skills); 
     }
   }, [session]);
 
@@ -52,7 +52,7 @@ export const JobProvider = ({ children }) => {
   );
 };
 
-// Create a custom hook to use the JobContext
+
 export const useJobContext = () => {
   return useContext(JobContext);
 };
