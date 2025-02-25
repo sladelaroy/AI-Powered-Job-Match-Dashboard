@@ -39,7 +39,7 @@ const JobDetails = ({ job, onClose }) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center p-4 sm:p-6 transition-opacity duration-500 ease-in-out ${
+      className={`fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center px-8 md:p-10 transition-opacity duration-500 ease-in-out  ${
         isModalVisible ? "opacity-100" : "opacity-0 pointer-events-none"
       }`}
     >
