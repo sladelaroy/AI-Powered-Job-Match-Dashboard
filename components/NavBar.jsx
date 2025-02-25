@@ -1,16 +1,26 @@
-import Link from "next/link";
+"use client";
+import React from "react";
+import { signOut } from "next-auth/react";
+
+const handleClick = () => {
+  signOut();
+};
 
 const Navbar = () => {
-    return (
-        <nav className="bg-blue-600 text-white p-4">
-            <div className="container mx-auto flex justify-between">
-                <h1 className="text-lg font-bold">Job Match</h1>
-                <ul className="flex space-x-4">
-                    <li><Link href="/">Home</Link></li>
-                </ul>
-            </div>
-        </nav>
-    );
+  return (
+    <nav className="bg-gray-800 p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        <div className="text-white text-xl font-bold">
+          <a href="/">Ai-job</a>
+        </div>
+        <div className="flex space-x-4">
+          <button onClick={() => handleClick()} className="text-white">
+            Logout
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;
